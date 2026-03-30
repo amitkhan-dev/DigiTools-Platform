@@ -6,7 +6,7 @@
 }
 
 
-  .logo-gradient {
+  .text-gradient {
     background: linear-gradient(88deg, #4f39f6 0%, #9514fa 100%);
     -webkit-background-clip: text;
     background-clip: text;

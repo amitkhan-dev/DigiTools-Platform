@@ -18,7 +18,7 @@ const Navbar = () => {
               <li><a>FAQ</a></li>
             </ul>
           </div>
-          <a className=" logo-gradient text-2xl font-bold">DigiTool</a>
+          <a className=" text-gradient text-2xl font-bold">DigiTool</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 ">
