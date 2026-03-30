@@ -18,7 +18,7 @@ const Navbar = () => {
               <li><a>FAQ</a></li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl ">DigiTool</a>
+          <a className=" logo-gradient text-2xl font-bold">DigiTool</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 ">
@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className="navbar-end gap-3">
             <img src={shoppingIcon} alt="Shopping cart" />
             <button className='btn'>Login</button>
-            <a className="btn mr-6">Button</a>
+            <a className="btn custom-gradient text-[#ffffff] rounded-3xl mr-6">Get Started</a>
           </div>
         </div>
       </div>
