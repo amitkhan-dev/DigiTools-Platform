@@ -3,8 +3,8 @@ import shoppingIcon from '../assets/products/shopping-cart.png'
 const Navbar = () => {
   return (
     
-      <div className='navbar bag-base-100 shadow-sm '>
-        <div className="navbar  max-w-300 mx-auto">
+      <div className='navbar bg-base-100 shadow-sm sticky top-0 z-50 '>
+        <div className="navbar  container mx-auto px-2 md:px-4">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost    lg:hidden">
@@ -18,7 +18,7 @@ const Navbar = () => {
               <li><a>FAQ</a></li>
             </ul>
           </div>
-          <a className=" text-gradient text-2xl font-bold">DigiTool</a>
+          <a className=" text-gradient text-xl md:text-2xl font-bold">DigiTool</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 ">
@@ -30,8 +30,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-3">
-            <img src={shoppingIcon} alt="Shopping cart" />
-            <button className='btn'>Login</button>
+            <img src={shoppingIcon} alt="Shopping cart" className="w-6 h-6 "/>
+            <button className='btn hidden sm:inline-flex'>Login</button>
             <a className="btn custom-gradient text-[#ffffff] rounded-3xl mr-6">Get Started</a>
           </div>
         </div>
