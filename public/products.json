@@ -8,7 +8,7 @@
     "tag": "Best Seller",
     "tagType": "best-seller",
     "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/file-text.svg"
+    "icon": "https://img.icons8.com/fluency/96/edit-property.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["2000+ templates", "Monthly updates", "Commercial license"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/layers.svg"
+    "icon": "https://img.icons8.com/fluency/96/video-editing.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["10M+ assets", "Commercial use", "No attribution"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/camera.svg"
+    "icon": "https://img.icons8.com/fluency/96/stack-of-photos.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["50+ automations", "API access", "Custom workflows"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/settings.svg"
+    "icon": "https://img.icons8.com/fluency/96/automatic.png"
   },
   {
     "id": 5,
@@ -52,18 +52,18 @@
     "tag": "New",
     "tagType": "new",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/user-square.svg"
+    "icon": "https://img.icons8.com/fluency/96/resume.png"
   },
   {
     "id": 6,
-    "name": "Social Media Content Kit",
+    "name": "Social Media Kit",
     "description": "Complete toolkit for creating engaging social media content across all platforms.",
     "price": 39,
     "period": "monthly",
     "tag": "Best Seller",
     "tagType": "best-seller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/share-2.svg"
+    "icon": "https://img.icons8.com/fluency/96/share.png"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["4K Export", "Stock Music Library", "Color Grading"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/video.svg"
+    "icon": "https://img.icons8.com/fluency/96/video-editing.png"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["Keyword tracker", "Competitor analysis", "Backlink checker"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/search.svg"
+    "icon": "https://img.icons8.com/fluency/96/google-logo.png"
   },
   {
     "id": 9,
@@ -96,6 +96,6 @@
     "tag": "Best Seller",
     "tagType": "best-seller",
     "features": ["Malware protection", "VPN access", "Secure vault"],
-    "icon": "https://unpkg.com/lucide-static@latest/icons/shield-check.svg"
+    "icon": "https://img.icons8.com/fluency/96/shield.png"
   }
 ]

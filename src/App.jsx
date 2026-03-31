@@ -6,6 +6,15 @@ import BelowBanner from './Components/BelowBanner'
 import GetStarts from './Components/GetStarts'
 import Navbar from './Components/Navbar'
 
+
+const getProducts = async () =>{
+  const res = await fetch("/products.json")
+  return res.json()
+}
+
+const fetchPromise = getProducts();
+// console.log(fetchPromise)
+
 function App() {
   
 
@@ -14,7 +23,7 @@ function App() {
       <Navbar/>
       <Banner/>
       <BelowBanner/>
-      <Allcards/>
+      <Allcards fetchPromise={fetchPromise}/>
       <GetStarts/>
     </>
   )

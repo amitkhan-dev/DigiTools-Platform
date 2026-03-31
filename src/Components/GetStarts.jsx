@@ -3,7 +3,7 @@ import React from 'react';
 const GetStarts = () => {
   return (
     <div>
-      <h2>I am get starts</h2>
+      <h2>Get Start Section</h2>
     </div>
   );
 };

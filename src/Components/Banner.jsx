@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div>
       <div className="bg-white min-h-screen flex items-center py-12 px-6">
-  <div className="container mx-auto max-w-7xl flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+  <div className="container mx-auto  flex flex-col-reverse  md:items-center md:justify-center  md:text-center lg:flex-row items-center justify-center gap-12">
     
     {/* Left Side: Content */}
     <div className="w-full lg:w-1/2 text-left flex flex-col items-start">
