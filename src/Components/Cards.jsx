@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cards = ({card}) => {
+const Cards = ({card ,isSubscribe, setIsSubscribe}) => {
   return (
     <div>
       <div key={card.id} >
@@ -38,7 +38,7 @@ const Cards = ({card}) => {
       </li>
     </ul>
     <div className="mt-6">
-      <button className="btn custom-gradient w-full rounded-full text-white hover:text-[16px] hover:text-red-100 ">Subscribe Now</button>
+      <button onClick={()=> setIsSubscribe(true)} className="btn custom-gradient w-full rounded-full text-white hover:text-[16px] hover:text-red-100 ">{isSubscribe?"SubsCribe":"Subscribe Now"}</button>
     </div>
   </div>
           </div>
