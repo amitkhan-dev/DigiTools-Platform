@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Cards = ({card ,isSubscribe, setIsSubscribe}) => {
+const Cards = ({card ,carts, setCarts}) => {
+  const [isSubscribe, setIsSubscribe] = useState( false);
+  // console.log(carts)
+  const handleSubscribe = ()=>{
+    setIsSubscribe( true); 
+    setCarts([...carts, card]);
+    
+  }
   return (
     <div>
       <div key={card.id} >
@@ -38,7 +45,7 @@ const Cards = ({card ,isSubscribe, setIsSubscribe}) => {
       </li>
     </ul>
     <div className="mt-6">
-      <button onClick={()=> setIsSubscribe(true)} className="btn custom-gradient w-full rounded-full text-white hover:text-[16px] hover:text-red-100 ">{isSubscribe?"SubsCribe":"Subscribe Now"}</button>
+      <button onClick={handleSubscribe} className="btn custom-gradient w-full rounded-full text-white hover:text-[16px] hover:text-red-100 ">{ isSubscribe ?"SubsCribe":"Subscribe Now"}</button>
     </div>
   </div>
           </div>
