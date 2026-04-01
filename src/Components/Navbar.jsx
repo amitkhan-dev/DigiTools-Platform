@@ -1,6 +1,7 @@
 import React from 'react';
 import shoppingIcon from '../assets/products/shopping-cart.png'
-const Navbar = () => {
+
+const Navbar = ({carts}) => {
   return (
     
       <div className='navbar bg-base-100 shadow-sm sticky top-0 z-50 '>
@@ -30,7 +31,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-3">
-            <img src={shoppingIcon} alt="Shopping cart" className="w-6 h-6 "/>
+            <img src={shoppingIcon } alt="Shopping cart" className="w-6 h-6 "/>
             <button className='btn hidden sm:inline-flex'>Login</button>
             <a className="btn custom-gradient text-[#ffffff] rounded-3xl mr-6">Get Started</a>
           </div>

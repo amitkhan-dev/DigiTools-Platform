@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Cards = ({card ,carts, setCarts}) => {
   const [isSubscribe, setIsSubscribe] = useState( false);
   // console.log(carts)
   const handleSubscribe = ()=>{
     setIsSubscribe( true); 
+
+    const isFound = carts.find(item=> item.id=== card.id)
+
+    if(isFound){
+      toast.error(`${card.name } Already add to Cart`)
+      return
+    }
+
     setCarts([...carts, card]);
+    toast.success(`${card.name } add to Cart`)
     
   }
   return (

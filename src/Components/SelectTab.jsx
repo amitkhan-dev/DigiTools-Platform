@@ -1,6 +1,6 @@
 
 
-const SelectTab = ({activeTab,setActiveTab}) => {
+const SelectTab = ({activeTab,setActiveTab,carts}) => {
   
   // console.log(products);
   return (
@@ -28,7 +28,7 @@ const SelectTab = ({activeTab,setActiveTab}) => {
       <div className='container mt-2 mb-10 flex items-center justify-center text-center gap-2'>
         
         <button onClick={()=> setActiveTab("Products")} className='btn px-4 custom-gradient py-2 rounded-full'>Products</button>
-        <button onClick={()=> setActiveTab("Cart")} className='btn px-4 py-2 rounded-full'>Cart</button>
+        <button onClick={()=> setActiveTab("Cart")} className='btn px-4 py-2 rounded-full'>{`Cart (${carts.length })`}</button>
       </div>
       
     </div>

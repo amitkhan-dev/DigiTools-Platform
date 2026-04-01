@@ -27,12 +27,13 @@ function App() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar carts={carts}/>
       <Banner/>
       <BelowBanner/>
       <PremiumText/>
       <SelectTab activeTab={activeTab}
       setActiveTab={setActiveTab}
+      carts={carts}
       />
       {activeTab === "Products" && <Allcards fetchPromise={fetchPromise}
       activeTab={activeTab}
@@ -41,7 +42,7 @@ function App() {
       setCarts={setCarts}
       />}
       {activeTab ==="Cart" && <Cart carts={carts}
-      
+      setCarts={setCarts}
       />}
 
       
