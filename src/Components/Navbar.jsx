@@ -30,8 +30,12 @@ const Navbar = ({carts}) => {
               <li><a>FAQ</a></li>
             </ul>
           </div>
-          <div className="navbar-end gap-3">
-            <img src={shoppingIcon } alt="Shopping cart" className="w-6 h-6 "/>
+          <div className="navbar-end gap-3 ">
+            <div className='relative'>
+              <img src={shoppingIcon } alt="Shopping cart" className="w-6 h-6 "/>
+              <span className='text-[18px] font-bold text-[#f44848]  rounded-full absolute -top-4.5 left-1.5'>{carts.length}</span>
+            </div>
+            
             <button className='btn hidden sm:inline-flex'>Login</button>
             <a className="btn custom-gradient text-[#ffffff] rounded-3xl mr-6">Get Started</a>
           </div>

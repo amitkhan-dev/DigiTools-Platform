@@ -5,7 +5,7 @@ import Allcards from './Components/Allcards'
 import Banner from './Components/Banner'
 import BelowBanner from './Components/BelowBanner'
 import SelectTab from './Components/SelectTab'
-import GetStarts from './Components/GetStarts'
+import GetStarted from './Components/GetStarted'
 import Navbar from './Components/Navbar'
 import Cart from './Components/Cart'
 import PremiumText from './Components/PremiumText'
@@ -46,7 +46,7 @@ function App() {
       />}
 
       
-      <GetStarts/>
+      <GetStarted/>
     </>
   )
 }

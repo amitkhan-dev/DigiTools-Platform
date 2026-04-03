@@ -16,6 +16,7 @@ const Cart = ({carts,setCarts}) => {
   return (
     <div>
       <div className='container border border-gray-300 rounded-2xl p-6 m-8'>
+        
         <h2 className='text-[24px] font-bold mx-3 mb-4'>Your Carts:</h2>
 
         {carts.length === 0 ? <p className=' font-bold text-2xl text-center items-center'> The cart is Emty</p>: 
