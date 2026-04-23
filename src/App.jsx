@@ -9,6 +9,9 @@ import GetStarted from './Components/GetStarted'
 import Navbar from './Components/Navbar'
 import Cart from './Components/Cart'
 import PremiumText from './Components/PremiumText'
+import TransparentPricing from './Components/TransparentPricing'
+import WorkFlow from './Components/WorkFolw'
+import Footer from './Components/Footer'
 
 
 const getProducts = async () =>{
@@ -35,18 +38,22 @@ function App() {
       setActiveTab={setActiveTab}
       carts={carts}
       />
-      {activeTab === "Products" && <Allcards fetchPromise={fetchPromise}
+      {activeTab === "Products" && (
+        <>
+        <Allcards fetchPromise={fetchPromise}
       activeTab={activeTab}
       setActiveTab={setActiveTab}
       carts={carts}
       setCarts={setCarts}
-      />}
+      /> <GetStarted/>
+      <TransparentPricing/>
+      <WorkFlow/>
+      <Footer/>
+      </>)}
       {activeTab ==="Cart" && <Cart carts={carts}
       setCarts={setCarts}
       />}
-
       
-      <GetStarted/>
     </>
   )
 }

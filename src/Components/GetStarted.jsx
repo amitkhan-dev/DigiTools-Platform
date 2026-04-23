@@ -28,7 +28,7 @@ const GetStarted = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-6">
-        {/* Section Heading */}
+      
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
             Get Started In 3 Steps
