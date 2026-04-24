@@ -1,60 +1,76 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const Cart = ({carts,setCarts}) => {
-  const totalPrice = carts.reduce((sum, item)=> sum + item.price,0);
-  
-  const handlePayment =()=>{
-    setCarts([])
-    toast.success("Payment Successful")
-  }
+const Cart = ({ carts, setCarts }) => {
+  const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
-  const handleDelect = (item)=>{
-    const filterArray = carts.filter(c=> c.id !== item.id) 
+  const handlePayment = () => {
+    setCarts([]);
+    toast.success("Payment Successful");
+  };
+
+  const handleDelect = (item) => {
+    const filterArray = carts.filter(c => c.id !== item.id);
     setCarts(filterArray);
-  }
-  return (
-    <div>
-      <div className='container border border-gray-300 rounded-2xl p-6 m-8'>
-        
-        <h2 className='text-[24px] font-bold mx-3 mb-4'>Your Carts:</h2>
+    toast.error("Item removed from cart");
+  };
 
-        {carts.length === 0 ? <p className=' font-bold text-2xl text-center items-center'> The cart is Emty</p>: 
+  return (
+    <div className='max-w-7xl mx-auto px-4'>
+      <div className='container border border-gray-300 rounded-2xl p-4 md:p-8 my-10 bg-white shadow-sm'>
         
-        <>
-        {carts.map(item=> 
-      <div key={item.name} className=' border border-gray-400 mx-3 p-8 mb-4 bg-[#f9fafc] rounded-lg'>
-        <div>
-          <div className=' flex justify-between'>
-          <div className='flex gap-5 items-center justify-center '>
-            <div className='border border-gray-300 p-3 rounded-full'>
-            <img className='w-20 h-20 rounded-full p-2 bg-[#ffffff] ' src={item.icon} alt="" />
+        <h2 className='text-2xl md:text-3xl font-bold mb-6 text-gray-800'>Your Cart:</h2>
+
+        {carts.length === 0 ? (
+          <div className='py-20 text-center'>
+            <p className='font-bold text-2xl text-gray-400'>The cart is empty</p>
           </div>
-          <div>
-            <h2 className='text-[24px] font-semibold'>{item.name}</h2>
-            <p className='text-[20px] font-semibold'>${item.price}</p>
-          </div>
-          </div>
-          
-          
-          <div>
-            <button onClick={()=> handleDelect(item)}  className=' btn bg-red-200 text-[#f92170] text-[16px] font-semibold' >Remove</button>
-          </div>
-        </div>
-        </div>
-        
-      </div>
-        
-        
-      )}
-      <div className='flex justify-between mx-4 mb-4'>
-        <h2>Total</h2>
-        <p className='text-[24px] font-bold mr-2'>${totalPrice}</p>
-      </div>
-      <button onClick={handlePayment} className='btn custom-gradient w-full rounded-full  text-[16px] font-bold text-[#ffffff] mb-3'>Proceed to Checkout</button>
-        </>}
-    
-    
+        ) : (
+          <>
+            {carts.map(item => (
+              <div key={item.id} className='border border-gray-100 p-4 md:p-6 mb-4 bg-[#f9fafc] rounded-xl'>
+                <div className='flex flex-col sm:flex-row items-center justify-between gap-4'>
+                  
+                  <div className='flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left'>
+                    <div className='border border-gray-200 p-2 rounded-2xl bg-white shadow-sm'>
+                      <img 
+                        className='w-20 h-20 md:w-24 md:h-24 object-contain rounded-lg' 
+                        src={item.icon} 
+                        alt={item.name} 
+                      />
+                    </div>
+                    <div>
+                      <h2 className='text-xl md:text-2xl font-semibold text-gray-800'>{item.name}</h2>
+                      <p className='text-lg md:text-xl font-medium text-gray-600 mt-1'>Price: ${item.price}</p>
+                    </div>
+                  </div>
+
+              
+                  <div className='w-full sm:w-auto'>
+                    <button 
+                      onClick={() => handleDelect(item)}  
+                      className='btn bg-red-50 hover:bg-red-100 border-red-200 text-[#f92170] w-full sm:w-auto px-6 font-bold'
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className='mt-8 pt-6 border-t border-gray-200'>
+              <div className='flex justify-between items-center px-2 mb-6'>
+                <h2 className='text-xl font-medium text-gray-700'>Total Amount:</h2>
+                <p className='text-2xl md:text-3xl font-extrabold '>${totalPrice}</p>
+              </div>
+              <button 
+                onClick={handlePayment} 
+                className='btn bg-blue-600 hover:bg-blue-700 w-full rounded-full text-lg font-bold text-white py-3 shadow-lg transition-all border-none'
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
